@@ -19,3 +19,15 @@ for i in map(lambda arr: arr[-1], MyIter()):
     print(i)
     if i > 100:
         break
+
+# 아래와 위 루프는 정확히 같음
+
+
+def last_el(arr):
+    return arr[-1]
+
+
+for i in map(last_el, MyIter()):
+    print(i)
+    if i > 100:
+        break
