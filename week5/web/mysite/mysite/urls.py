@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+
+# 127.0.0.1:8000 : 호스트
+# 아이피 주소는 도메인으로 변경 가능
+# naver.com:8000
 
 urlpatterns = [
+    # http://127.0.0.1:8000/polls/
+    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
