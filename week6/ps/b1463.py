@@ -18,6 +18,7 @@ def calc(n):
     if n == 3 or n == 2:
         return 1
 
+    # 연산 시작
     vals = []
     if n % 3 == 0:
         # 1 (in 1 + calc...) : 3으로 나눈다
@@ -28,6 +29,8 @@ def calc(n):
 
     # 1 (in 1 + calc...) : 1을 뺀다
     vals.append(1 + calc(n - 1))
+    # 연산 끝
+
     return min(vals)
 
 
