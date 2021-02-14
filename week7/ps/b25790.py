@@ -26,6 +26,7 @@ def calc_score(cur_idx, streak):
     # 현재 계단을 밟아서 얻은 점수
     score = scores[cur_idx]
 
+    # 마지막 계단을 밟은 경우
     if N == cur_idx:
         return score
 
@@ -35,8 +36,8 @@ def calc_score(cur_idx, streak):
         n1 = calc_score(cur_idx + 1, streak + 1)
         possible_values.append(n1)
 
-    if cur_idx + 2 < N:
-        n2 = calc_score(cur_idx + 2, 0)
+    if cur_idx + 2 <= N:
+        n2 = calc_score(cur_idx + 2, 1)
         possible_values.append(n2)
 
     max_score = score + max(possible_values)
@@ -44,4 +45,4 @@ def calc_score(cur_idx, streak):
     return max_score
 
 
-print(calc_score(0, 1))
+print(calc_score(0, 0))
