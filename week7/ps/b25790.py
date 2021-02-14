@@ -39,8 +39,9 @@ def calc_score(cur_idx, streak):
         n2 = calc_score(cur_idx + 2, 0)
         possible_values.append(n2)
 
-    print(cur_idx, possible_values)
-    return score + max(possible_values)
+    max_score = score + max(possible_values)
+    print(N - cur_idx, possible_values)
+    return max_score
 
 
-print(calc_score(0, 0))
+print(calc_score(0, 1))
