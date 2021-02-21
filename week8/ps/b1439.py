@@ -1,7 +1,7 @@
 from functools import lru_cache
 
-# S = input()
-S = "0001100"
+S = input()
+# S = "0001100"
 
 # 01010101010
 # 00010101010 => 010101010
